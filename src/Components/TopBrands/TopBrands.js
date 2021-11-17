@@ -6,13 +6,14 @@ import img4 from '../../images/4.png';
 import offer from '../../images/offer.png';
 import tag from '../../images/tag.png';
 import { Link } from 'react-router-dom';
+import { Container, Form } from 'react-bootstrap';
 
 const TopBrands = () => {
     return (
         <div className="top-brands">
-		<div className="container">
+		<Container>
 			<h3>Hot Offers</h3>
-			<div className="agile_top_brands_grids">
+			<div className="agile_top_brands_grids d-flex">
 				<div className="col-md-3 top_brand_left">
 					<div className="hover14 column">
 						<div className="agile_top_brand_left_grid">
@@ -26,21 +27,21 @@ const TopBrands = () => {
 											<h4>$7.99 <span>$10.00</span></h4>
 										</div>
 										<div className="snipcart-details top_brand_home_details">
-											<form action="checkout.html" method="post">
+											<Form action="checkout.html" method="post">
 												<fieldset>
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" />
-													<input type="hidden" name="business" value=" " />
-													<input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
-													<input type="hidden" name="amount" value="7.99" />
-													<input type="hidden" name="discount_amount" value="1.00" />
-													<input type="hidden" name="currency_code" value="USD" />
-													<input type="hidden" name="return" value=" " />
-													<input type="hidden" name="cancel_return" value=" " />
-													<input type="submit" name="submit" value="Add to cart" className="button" />
+													<Form.Control type="hidden" name="cmd" value="_cart" />
+													<Form.Control type="hidden" name="add" value="1" />
+													<Form.Control type="hidden" name="business" value=" " />
+													<Form.Control type="hidden" name="item_name" value="Fortune Sunflower Oil" />
+													<Form.Control type="hidden" name="amount" value="7.99" />
+													<Form.Control type="hidden" name="discount_amount" value="1.00" />
+													<Form.Control type="hidden" name="currency_code" value="USD" />
+													<Form.Control type="hidden" name="return" value=" " />
+													<Form.Control type="hidden" name="cancel_return" value=" " />
+													<Form.Control type="submit" name="submit" value="Add to cart" className="button" />
 												</fieldset>
 													
-											</form>
+											</Form>
 									
 										</div>
 									</div>
@@ -61,20 +62,20 @@ const TopBrands = () => {
 											<h4>$11.99 <span>$15.00</span></h4>
 										</div>
 										<div className="snipcart-details top_brand_home_details">
-											<form action="#" method="post">
+											<Form action="#" method="post">
 												<fieldset>
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" />
-													<input type="hidden" name="business" value=" " />
-													<input type="hidden" name="item_name" value="basmati rise" />
-													<input type="hidden" name="amount" value="11.99" />
-													<input type="hidden" name="discount_amount" value="1.00" />
-													<input type="hidden" name="currency_code" value="USD" />
-													<input type="hidden" name="return" value=" " />
-													<input type="hidden" name="cancel_return" value=" " />
-													<input type="submit" name="submit" value="Add to cart" className="button" />
+													<Form.Control type="hidden" name="cmd" value="_cart" />
+													<Form.Control type="hidden" name="add" value="1" />
+													<Form.Control type="hidden" name="business" value=" " />
+													<Form.Control type="hidden" name="item_name" value="basmati rise" />
+													<Form.Control type="hidden" name="amount" value="11.99" />
+													<Form.Control type="hidden" name="discount_amount" value="1.00" />
+													<Form.Control type="hidden" name="currency_code" value="USD" />
+													<Form.Control type="hidden" name="return" value=" " />
+													<Form.Control type="hidden" name="cancel_return" value=" " />
+													<Form.Control type="submit" name="submit" value="Add to cart" className="button" />
 												</fieldset>
-											</form>
+											</Form>
 										</div>
 									</div>
 								</figure>
@@ -97,20 +98,20 @@ const TopBrands = () => {
 											<h4>$8.00 <span>$10.00</span></h4>
 										</div>
 										<div className="snipcart-details top_brand_home_details">
-											<form action="#" method="post">
+											<Form action="#" method="post">
 												<fieldset>
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" />
-													<input type="hidden" name="business" value=" " />
-													<input type="hidden" name="item_name" value="Pepsi soft drink" />
-													<input type="hidden" name="amount" value="8.00" />
-													<input type="hidden" name="discount_amount" value="1.00" />
-													<input type="hidden" name="currency_code" value="USD" />
-													<input type="hidden" name="return" value=" " />
-													<input type="hidden" name="cancel_return" value=" " />
-													<input type="submit" name="submit" value="Add to cart" className="button" />
+													<Form.Control type="hidden" name="cmd" value="_cart" />
+													<Form.Control type="hidden" name="add" value="1" />
+													<Form.Control type="hidden" name="business" value=" " />
+													<Form.Control type="hidden" name="item_name" value="Pepsi soft drink" />
+													<Form.Control type="hidden" name="amount" value="8.00" />
+													<Form.Control type="hidden" name="discount_amount" value="1.00" />
+													<Form.Control type="hidden" name="currency_code" value="USD" />
+													<Form.Control type="hidden" name="return" value=" " />
+													<Form.Control type="hidden" name="cancel_return" value=" " />
+													<Form.Control type="submit" name="submit" value="Add to cart" className="button" />
 												</fieldset>
-											</form>
+											</Form>
 										</div>
 									</div>
 								</figure>
@@ -133,20 +134,20 @@ const TopBrands = () => {
 											<h4>$9.00 <span>$11.00</span></h4>
 										</div>
 										<div className="snipcart-details top_brand_home_details">
-											<form action="#" method="post">
+											<Form action="#" method="post">
 												<fieldset>
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" />
-													<input type="hidden" name="business" value=" " />
-													<input type="hidden" name="item_name" value="dogs food" />
-													<input type="hidden" name="amount" value="9.00" />
-													<input type="hidden" name="discount_amount" value="1.00" />
-													<input type="hidden" name="currency_code" value="USD" />
-													<input type="hidden" name="return" value=" " />
-													<input type="hidden" name="cancel_return" value=" " />
-													<input type="submit" name="submit" value="Add to cart" className="button" />
+													<Form.Control type="hidden" name="cmd" value="_cart" />
+													<Form.Control type="hidden" name="add" value="1" />
+													<Form.Control type="hidden" name="business" value=" " />
+													<Form.Control type="hidden" name="item_name" value="dogs food" />
+													<Form.Control type="hidden" name="amount" value="9.00" />
+													<Form.Control type="hidden" name="discount_amount" value="1.00" />
+													<Form.Control type="hidden" name="currency_code" value="USD" />
+													<Form.Control type="hidden" name="return" value=" " />
+													<Form.Control type="hidden" name="cancel_return" value=" " />
+													<Form.Control type="submit" name="submit" value="Add to cart" className="button" />
 												</fieldset>
-											</form>
+											</Form>
 										</div>
 									</div>
 								</figure>
@@ -156,7 +157,7 @@ const TopBrands = () => {
 				</div>
 				<div className="clearfix"> </div>
 			</div>
-		</div>
+		</Container>
 	</div>
     )
 }

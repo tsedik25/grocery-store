@@ -7,14 +7,16 @@ import img11 from "../../images/11.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { Container, Col } from "react-bootstrap";
 
 const FreshVegetables = () => {
     return (
         <div className="fresh-vegetables">
-            <div className="container">
+            <Container>
                 <h3>Top Products</h3>
                 <div className="w3l_fresh_vegetables_grids">
-                    <div className="col-md-3 w3l_fresh_vegetables_grid w3l_fresh_vegetables_grid_left">
+                    
+                    <Col md={3} className="w3l_fresh_vegetables_grid w3l_fresh_vegetables_grid_left">
                         <div className="w3l_fresh_vegetables_grid2">
                             <ul>
                                 <li>
@@ -79,9 +81,9 @@ const FreshVegetables = () => {
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="col-md-9 w3l_fresh_vegetables_grid_right">
-                        <div className="col-md-4 w3l_fresh_vegetables_grid">
+                    </Col>
+                    <Col md={9} className="w3l_fresh_vegetables_grid_right d-flex">
+                        <Col md={4} className="w3l_fresh_vegetables_grid">
                             <div className="w3l_fresh_vegetables_grid1">
                                 <img
                                     src={img8}
@@ -89,8 +91,8 @@ const FreshVegetables = () => {
                                     className="img-responsive"
                                 />
                             </div>
-                        </div>
-                        <div className="col-md-4 w3l_fresh_vegetables_grid">
+                        </Col>
+                        <Col md={4} className="w3l_fresh_vegetables_grid">
                             <div className="w3l_fresh_vegetables_grid1">
                                 <div className="w3l_fresh_vegetables_grid1_rel">
                                     <img
@@ -121,8 +123,8 @@ const FreshVegetables = () => {
                                     <h5>Special Offers</h5>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-md-4 w3l_fresh_vegetables_grid">
+                        </Col>
+                        <Col md={4} className="w3l_fresh_vegetables_grid">
                             <div className="w3l_fresh_vegetables_grid1">
                                 <img
                                     src={img9}
@@ -137,7 +139,7 @@ const FreshVegetables = () => {
                                     className="img-responsive"
                                 />
                             </div>
-                        </div>
+                        </Col>
                         <div className="clearfix"> </div>
                         <div className="agileinfo_move_text">
                             <div className="agileinfo_marquee">
@@ -152,10 +154,10 @@ const FreshVegetables = () => {
                             </div>
                             <div className="clearfix"></div>
                         </div>
-                    </div>
+                    </Col>
                     <div className="clearfix"> </div>
                 </div>
-            </div>
+            </Container>
         </div>
     );
 };
