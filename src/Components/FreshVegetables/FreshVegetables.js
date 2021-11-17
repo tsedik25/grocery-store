@@ -6,6 +6,7 @@ import img10 from "../../images/10.jpg";
 import img11 from "../../images/11.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const FreshVegetables = () => {
     return (
@@ -20,61 +21,61 @@ const FreshVegetables = () => {
                                     <i>
                                         <FontAwesomeIcon icon={faCheck} />
                                     </i>
-                                    <a href="products.html">All Brands</a>
+                                    <Link to="products.html">All Brands</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faCheck} />
                                     </i>
-                                    <a href="vegetables.html">Vegetables</a>
+                                    <Link to="vegetables.html">Vegetables</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faCheck} />
                                     </i>
-                                    <a href="vegetables.html">Fruits</a>
+                                    <Link to="vegetables.html">Fruits</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faCheck} />
                                     </i>
-                                    <a href="drinks.html">Juices</a>
+                                    <Link to="drinks.html">Juices</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faCheck} />
                                     </i>
-                                    <a href="pet.html">Pet Food</a>
+                                    <Link to="pet.html">Pet Food</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faCheck} />
                                     </i>
-                                    <a href="bread.html">Bread & Bakery</a>
+                                    <Link to="bread.html">Bread & Bakery</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faCheck} />
                                     </i>
-                                    <a href="household.html">Cleaning</a>
+                                    <Link to="household.html">Cleaning</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faCheck} />
                                     </i>
-                                    <a href="products.html">Spices</a>
+                                    <Link to="products.html">Spices</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faCheck} />
                                     </i>
-                                    <a href="products.html">Dry Fruits</a>
+                                    <Link to="products.html">Dry Fruits</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faCheck} />
                                     </i>
-                                    <a href="products.html">Dairy Products</a>
+                                    <Link to="products.html">Dairy Products</Link>
                                 </li>
                             </ul>
                         </div>
@@ -99,13 +100,13 @@ const FreshVegetables = () => {
                                     />
                                     <div className="w3l_fresh_vegetables_grid1_rel_pos">
                                         <div className="more m1">
-                                            <a
-                                                href="products.html"
+                                            <Link
+                                                to="products.html"
                                                 className="button--saqui button--round-l button--text-thick"
                                                 data-text="Shop now"
                                             >
                                                 Shop now
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

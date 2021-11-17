@@ -5,6 +5,7 @@ import img3 from '../../images/3.png';
 import img4 from '../../images/4.png';
 import offer from '../../images/offer.png';
 import tag from '../../images/tag.png';
+import { Link } from 'react-router-dom';
 
 const TopBrands = () => {
     return (
@@ -20,7 +21,7 @@ const TopBrands = () => {
 								<figure>
 									<div className="snipcart-item block" >
 										<div className="snipcart-thumb">
-											<a href="single.html"><img title=" " alt=" " src={img1} /></a>		
+											<Link to="single.html"><img title=" " alt=" " src={img1} /></Link>		
 											<p>fortune sunflower oil</p>
 											<h4>$7.99 <span>$10.00</span></h4>
 										</div>
@@ -55,7 +56,7 @@ const TopBrands = () => {
 								<figure>
 									<div className="snipcart-item block" >
 										<div className="snipcart-thumb">
-											<a href="single.html"><img title=" " alt=" " src={img3} /></a>		
+											<Link to="single.html"><img title=" " alt=" " src={img3} /></Link>		
 											<p>basmati rise (5 Kg)</p>
 											<h4>$11.99 <span>$15.00</span></h4>
 										</div>
@@ -91,7 +92,7 @@ const TopBrands = () => {
 								<figure>
 									<div className="snipcart-item block">
 										<div className="snipcart-thumb">
-											<a href="single.html"><img src={img2} alt=" " className="img-responsive" /></a>
+											<Link to="single.html"><img src={img2} alt=" " className="img-responsive" /></Link>
 											<p>Pepsi soft drink (2 Ltr)</p>
 											<h4>$8.00 <span>$10.00</span></h4>
 										</div>
@@ -127,7 +128,7 @@ const TopBrands = () => {
 								<figure>
 									<div className="snipcart-item block">
 										<div className="snipcart-thumb">
-											<a href="single.html"><img src={img4} alt=" " className="img-responsive" /></a>
+											<Link to="single.html"><img src={img4} alt=" " className="img-responsive" /></Link>
 											<p>dogs food (4 Kg)</p>
 											<h4>$9.00 <span>$11.00</span></h4>
 										</div>

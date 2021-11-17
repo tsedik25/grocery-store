@@ -275,17 +275,18 @@ ul.dropdown-menu.drp-mnu li a i {
 }
 .wthree_banner_bottom_left_grid_sub1 {
     float: right;
+    display: flex;
     width: 80%;
 }
 .w3l_banner_nav_right {
     float: right;
     width: 80%;
 }
-.navbar-nav > li {
+.navbar-nav > .nav-item {
     float: none;
 }
-.nav > li > a:hover,
-.nav > li > a:focus {
+.nav > .nav-item > a:hover,
+.nav > .nav-item > a:focus {
     background-color: #84c639;
     color: #fff;
 }
@@ -294,7 +295,12 @@ ul.dropdown-menu.drp-mnu li a i {
     margin: 0;
     border-top: 1px solid #b58f62;
 }
-.navbar-nav > li > a {
+.navbar-nav > .nav-item > a {
+    color: #212121;
+    padding: 10px 0px 10px 40px;
+    border-bottom: 1px dotted #cdcdcd;
+}
+.navbar-nav > .nav-item > .nav-item > a {
     color: #212121;
     padding: 10px 0px 10px 40px;
     border-bottom: 1px dotted #cdcdcd;

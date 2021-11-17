@@ -1,132 +1,126 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Dropdown } from "react-bootstrap";
+import {
+    Form,
+    Button,
+    Nav,
+    Navbar,
+    NavDropdown,
+    Container,
+    Dropdown,
+} from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faUser,
-    faPhone,
-    faEnvelopeOpen,
+    faPhoneAlt,
+    faEnvelope,
     faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 // import "./Navbars.css";
 // import "../../images/img-sp.png";
 
 const Navbars = () => {
+    const userIcon = <FontAwesomeIcon icon={faUser} />;
     return (
-        
         <>
             <div className="agileits_header">
                 <div className="w3l_offers">
-                    <a href="products.html">Today's special Offers !</a>
+                    <Link to="products.html">Today's special Offers !</Link>
                 </div>
                 <div className="w3l_search">
-                    <form action="#" method="post">
-                        <input
+                    <Form>
+                        <Form.Control
                             type="text"
                             name="Product"
-                            value="Search a product..."
-                            onfocus="this.value = '';"
-                            onblur="if (this.value == '') {this.value = 'Search a product...';}"
+                            value="Search Link product..."
                             required=""
                         />
-                        <input type="submit" value=" " />
-                    </form>
+                        <Form.Control type="submit" value=" " />
+                    </Form>
                 </div>
                 <div className="product_list_header">
-                    <form action="#" method="post" className="last">
+                    <Form action="#" method="post" className="last">
                         <fieldset>
-                            <input type="hidden" name="cmd" value="_cart" />
-                            <input type="hidden" name="display" value="1" />
-                            <input
+                            <Form.Control
+                                type="hidden"
+                                name="cmd"
+                                value="_cart"
+                            />
+                            <Form.Control
+                                type="hidden"
+                                name="display"
+                                value="1"
+                            />
+                            <Form.Control
                                 type="submit"
                                 name="submit"
                                 value="View your cart"
                                 className="button"
                             />
                         </fieldset>
-                    </form>
+                    </Form>
                 </div>
                 <div className="w3l_header_right">
-                    <ul>
-                        <li className="dropdown profile_details_drop">
-                            <a
-                                href="#"
-                                className="dropdown-toggle"
-                                data-toggle="dropdown"
-                            >
-                                <FontAwesomeIcon icon={faUser} />
-                                <span className="caret"></span>
-                            </a>
-                            <div className="mega-dropdown-menu">
-                                <div className="w3ls_vegetables">
-                                    <ul className="dropdown-menu drp-mnu">
-                                        <li>
-                                            <a href="login.html">Login</a>
-                                        </li>
-                                        <li>
-                                            <a href="login.html">Sign Up</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <NavDropdown title={userIcon} id="basic-nav-dropdown">
+                        <Link to = ""><NavDropdown.Item>
+                            Login
+                        </NavDropdown.Item></Link>
+                        <Link to = ""><NavDropdown.Item>
+                            Sign Up
+                        </NavDropdown.Item></Link>
+                    </NavDropdown>
                 </div>
                 <div className="w3l_header_right1">
                     <h2>
-                        <a href="mail.html">Contact Us</a>
+                        <Link to="mail.html">Contact Us</Link>
                     </h2>
                 </div>
                 <div className="clearfix"> </div>
             </div>
-
             <div className="logo_products">
-                <div className="container">
+                <Container>
                     <div className="w3ls_logo_products_left">
                         <h1>
-                            <a href="index.html">
+                            <Link to="index.html">
                                 <span>Grocery</span> Store
-                            </a>
+                            </Link>
                         </h1>
                     </div>
                     <div className="w3ls_logo_products_left1">
                         <ul className="special_items">
                             <li>
-                                <a href="events.html">Events</a>
+                                <Link to="events.html">Events</Link>
                                 <i>/</i>
                             </li>
                             <li>
-                                <a href="about.html">About Us</a>
+                                <Link to="about.html">About Us</Link>
                                 <i>/</i>
                             </li>
                             <li>
-                                <a href="products.html">Best Deals</a>
+                                <Link to="products.html">Best Deals</Link>
                                 <i>/</i>
                             </li>
                             <li>
-                                <a href="services.html">Services</a>
+                                <Link to="services.html">Services</Link>
                             </li>
                         </ul>
                     </div>
                     <div className="w3ls_logo_products_left1">
                         <ul className="phone_email">
                             <li>
-                                <i className="fa fa-phone" aria-hidden="true"></i>
+                                <FontAwesomeIcon icon = {faPhoneAlt}/>
                                 (+0123) 234 567
                             </li>
                             <li>
-                                <i
-                                    className="fa fa-envelope-o"
-                                    aria-hidden="true"
-                                ></i>
-                                <a href="mailto:store@grocery.com">
+                            <   FontAwesomeIcon icon = {faEnvelope}/>
+                                <Link to="mailto:store@grocery.com">
                                     store@grocery.com
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
                     <div className="clearfix"> </div>
-                </div>
+                </Container>
             </div>
         </>
     );
