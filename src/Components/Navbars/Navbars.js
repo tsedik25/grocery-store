@@ -25,7 +25,7 @@ const Navbars = () => {
         <>
             <div className="agileits_header">
                 <div className="w3l_offers">
-                    <Link to="products.html">Today's special Offers !</Link>
+                    <Link to="/products">Today's special Offers !</Link>
                 </div>
                 <div className="w3l_search">
                     <Form>
@@ -62,17 +62,17 @@ const Navbars = () => {
                 </div>
                 <div className="w3l_header_right">
                     <NavDropdown title={userIcon} id="basic-nav-dropdown">
-                        <Link to = ""><NavDropdown.Item>
-                            Login
-                        </NavDropdown.Item></Link>
-                        <Link to = ""><NavDropdown.Item>
-                            Sign Up
-                        </NavDropdown.Item></Link>
+                        <NavDropdown.Item>
+                            <Link to="/login">Login</Link>
+                        </NavDropdown.Item>
+                        <NavDropdown.Item>
+                            <Link to="">Sign Up</Link>
+                        </NavDropdown.Item>
                     </NavDropdown>
                 </div>
                 <div className="w3l_header_right1">
                     <h2>
-                        <Link to="mail.html">Contact Us</Link>
+                        <Link to="/mail">Contact Us</Link>
                     </h2>
                 </div>
                 <div className="clearfix"> </div>
@@ -81,7 +81,7 @@ const Navbars = () => {
                 <Container>
                     <div className="w3ls_logo_products_left">
                         <h1>
-                            <Link to="index.html">
+                            <Link to="/">
                                 <span>Grocery</span> Store
                             </Link>
                         </h1>
@@ -89,30 +89,30 @@ const Navbars = () => {
                     <div className="w3ls_logo_products_left1">
                         <ul className="special_items">
                             <li>
-                                <Link to="events.html">Events</Link>
+                                <Link to="/events">Events</Link>
                                 <i>/</i>
                             </li>
                             <li>
-                                <Link to="about.html">About Us</Link>
+                                <Link to="/about">About Us</Link>
                                 <i>/</i>
                             </li>
                             <li>
-                                <Link to="products.html">Best Deals</Link>
+                                <Link to="/products">Best Deals</Link>
                                 <i>/</i>
                             </li>
                             <li>
-                                <Link to="services.html">Services</Link>
+                                <Link to="/services">Services</Link>
                             </li>
                         </ul>
                     </div>
                     <div className="w3ls_logo_products_left1">
                         <ul className="phone_email">
                             <li>
-                                <FontAwesomeIcon icon = {faPhoneAlt}/>
+                                <FontAwesomeIcon icon={faPhoneAlt} />
                                 (+0123) 234 567
                             </li>
                             <li>
-                            <   FontAwesomeIcon icon = {faEnvelope}/>
+                                <FontAwesomeIcon icon={faEnvelope} />
                                 <Link to="mailto:store@grocery.com">
                                     store@grocery.com
                                 </Link>

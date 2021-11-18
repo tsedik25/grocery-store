@@ -18,16 +18,16 @@ const Footer = () => {
                     <h3>information</h3>
                     <ul className="w3_footer_grid_list">
                         <li>
-                            <Link to="events.html">Events</Link>
+                            <Link to="/events">Events</Link>
                         </li>
                         <li>
-                            <Link to="about.html">About Us</Link>
+                            <Link to="/about">About Us</Link>
                         </li>
                         <li>
-                            <Link to="products.html">Best Deals</Link>
+                            <Link to="/products">Best Deals</Link>
                         </li>
                         <li>
-                            <Link to="services.html">Services</Link>
+                            <Link to="/services">Services</Link>
                         </li>
                         <li>
                             <Link to="short-codes.html">Short Codes</Link>
