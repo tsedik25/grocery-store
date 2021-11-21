@@ -38,13 +38,13 @@ const Footer = () => {
                     <h3>policy info</h3>
                     <ul className="w3_footer_grid_list">
                         <li>
-                            <Link to="faqs.html">FAQ</Link>
+                            <Link to="/faqs">FAQ</Link>
                         </li>
                         <li>
-                            <Link to="privacy.html">privacy policy</Link>
+                            <Link to="/privacy">privacy policy</Link>
                         </li>
                         <li>
-                            <Link to="privacy.html">terms of use</Link>
+                            <Link to="/privacy">terms of use</Link>
                         </li>
                     </ul>
                 </div>
@@ -52,19 +52,19 @@ const Footer = () => {
                     <h3>what in stores</h3>
                     <ul className="w3_footer_grid_list">
                         <li>
-                            <Link to="pet.html">Pet Food</Link>
+                            <Link to="/pet">Pet Food</Link>
                         </li>
                         <li>
-                            <Link to="frozen.html">Frozen Snacks</Link>
+                            <Link to="/frozen">Frozen Snacks</Link>
                         </li>
                         <li>
-                            <Link to="kitchen.html">Kitchen</Link>
+                            <Link to="/kitchen">Kitchen</Link>
                         </li>
                         <li>
-                            <Link to="products.html">Branded Foods</Link>
+                            <Link to="/products">Branded Foods</Link>
                         </li>
                         <li>
-                            <Link to="household.html">Households</Link>
+                            <Link to="/household">Households</Link>
                         </li>
                     </ul>
                 </div>

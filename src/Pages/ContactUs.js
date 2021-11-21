@@ -13,7 +13,7 @@ const ContactUs = () => {
                 <Mail/>
             </div>
             <div className="clearfix"></div>
-            {/* <Map/> */}
+            <Map/>
         </div>
     )
 }

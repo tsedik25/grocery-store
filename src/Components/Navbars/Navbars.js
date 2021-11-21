@@ -61,7 +61,7 @@ const Navbars = () => {
                     </Form>
                 </div>
                 <div className="w3l_header_right">
-                    <NavDropdown title={userIcon} id="basic-nav-dropdown">
+                    <NavDropdown title={userIcon} class="userIconDropdown" id="basic-nav-dropdown">
                         <NavDropdown.Item>
                             <Link to="/login">Login</Link>
                         </NavDropdown.Item>
