@@ -1,21 +1,25 @@
-import React from 'react'
-import LeftBanner from '../Components/Banner/LeftBanner'
-import RIghtKitchenBanner from '../Components/Kitchen/RIghtKitchenBanner'
-import ProductBreadcrumbs from '../Components/ProductBreadcrumbs/ProductBreadcrumbs'
-import TopBrands from '../Components/TopBrands/TopBrands'
+import React from "react";
+import LeftBanner from "../Components/Banner/LeftBanner";
+import RIghtKitchenBanner from "../Components/Kitchen/RIghtKitchenBanner";
+import ProductBreadcrumbs from "../Components/ProductBreadcrumbs/ProductBreadcrumbs";
+import TopBrands from "../Components/TopBrands/TopBrands";
+import { Helmet } from "react-helmet";
 
 const Kitchen = () => {
     return (
         <div>
-            <ProductBreadcrumbs PageName="Kitchen"/>
+            <Helmet>
+                <title>Kitchen</title>
+            </Helmet>
+            <ProductBreadcrumbs PageName="Kitchen" />
             <div className="banner">
-                <LeftBanner/>
-                <RIghtKitchenBanner/>
+                <LeftBanner />
+                <RIghtKitchenBanner />
                 <div className="clearfix"></div>
             </div>
-            <TopBrands/>
+            <TopBrands />
         </div>
-    )
-}
+    );
+};
 
 export default Kitchen;

@@ -1,26 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import {
     Form,
-    Button,
-    Nav,
-    Navbar,
     NavDropdown,
     Container,
-    Dropdown,
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faUser,
     faPhoneAlt,
     faEnvelope,
-    faCaretDown,
+ 
 } from "@fortawesome/free-solid-svg-icons";
-// import "./Navbars.css";
-// import "../../images/img-sp.png";
+
+
 
 const Navbars = () => {
     const userIcon = <FontAwesomeIcon icon={faUser} />;
+    const [search, setSearch] = useState("");
     return (
         <>
             <div className="agileits_header">
@@ -32,8 +29,10 @@ const Navbars = () => {
                         <Form.Control
                             type="text"
                             name="Product"
-                            value="Search Link product..."
+                            placeholder="Search Link product..."
+                            value={search}
                             required=""
+                            onChange= {(e) => setSearch(e.target.value)}
                         />
                         <Form.Control type="submit" value=" " />
                     </Form>
@@ -61,13 +60,23 @@ const Navbars = () => {
                     </Form>
                 </div>
                 <div className="w3l_header_right">
-                    <NavDropdown title={userIcon} class="userIconDropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item>
-                            <Link to="/login">Login</Link>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item>
-                            <Link to="">Sign Up</Link>
-                        </NavDropdown.Item>
+                    <NavDropdown
+                        title={userIcon}
+                        className="userIconDropdown"
+                        id="basic-nav-dropdown"
+                    >
+                        <div className="w3ls_vegetables">
+                            <NavDropdown.Item>
+                                <Link to="/login" className="nav-link">
+                                    Login
+                                </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                <Link to="/login" className="nav-link">
+                                    Sign Up
+                                </Link>
+                            </NavDropdown.Item>
+                        </div>
                     </NavDropdown>
                 </div>
                 <div className="w3l_header_right1">
@@ -113,9 +122,9 @@ const Navbars = () => {
                             </li>
                             <li>
                                 <FontAwesomeIcon icon={faEnvelope} />
-                                <Link to="mailto:store@grocery.com">
+                                <a href="mailto:store@grocery.com">
                                     store@grocery.com
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </div>

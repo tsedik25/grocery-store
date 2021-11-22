@@ -6,9 +6,8 @@ const LeftBanner = () => {
     return (
         <div className="w3l_banner_nav_left">
             <Nav
-                className="col-md-12 d-none d-md-block bg-light sidebar navbar-nav"
-                activeKey="/home"
-                onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+                className="sidebar navbar-nav"
+                
             >
                 <div className="sidebar-sticky"></div>
                 <Nav.Item>
@@ -26,17 +25,19 @@ const LeftBanner = () => {
                         title="Veggies & Fruits"
                         id="basic-nav-dropdown"
                     >
-                        <NavDropdown.Item>
-                            <Link to="/vegetables" className="nav-link">
-                                Vegetables
-                            </Link>
-                        </NavDropdown.Item>
+                        <div className="w3ls_vegetables">
+                            <NavDropdown.Item>
+                                <Link to="/vegetables" className="nav-link">
+                                    Vegetables
+                                </Link>
+                            </NavDropdown.Item>
 
-                        <NavDropdown.Item>
-                            <Link to="/vegetables" className="nav-link">
-                                Fruits
-                            </Link>
-                        </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                <Link to="/vegetables" className="nav-link">
+                                    Fruits
+                                </Link>
+                            </NavDropdown.Item>
+                        </div>
                     </NavDropdown>
                 </Nav.Item>
                 <Nav.Item>
@@ -51,17 +52,19 @@ const LeftBanner = () => {
                 </Nav.Item>
                 <Nav.Item>
                     <NavDropdown title="Beverages" id="basic-nav-dropdown">
-                        <NavDropdown.Item>
-                            <Link className="nav-link" to="/drinks">
-                                Soft Drinks
-                            </Link>
-                        </NavDropdown.Item>
+                        <div className="w3ls_vegetables">
+                            <NavDropdown.Item>
+                                <Link className="nav-link" to="/drinks">
+                                    Soft Drinks
+                                </Link>
+                            </NavDropdown.Item>
 
-                        <NavDropdown.Item>
-                            <Link className="nav-link" to="/drinks">
-                                Juices
-                            </Link>
-                        </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                <Link className="nav-link" to="/drinks">
+                                    Juices
+                                </Link>
+                            </NavDropdown.Item>
+                        </div>
                     </NavDropdown>
                 </Nav.Item>
                 <Nav.Item>
@@ -71,17 +74,19 @@ const LeftBanner = () => {
                 </Nav.Item>
                 <Nav.Item>
                     <NavDropdown title="Frozen Foods" id="basic-nav-dropdown">
-                        <NavDropdown.Item>
-                            <Link className="nav-link" to="/frozen">
-                                Frozen Snacks
-                            </Link>
-                        </NavDropdown.Item>
+                        <div className="w3ls_vegetables">
+                            <NavDropdown.Item>
+                                <Link className="nav-link" to="/frozen">
+                                    Frozen Snacks
+                                </Link>
+                            </NavDropdown.Item>
 
-                        <NavDropdown.Item>
-                            <Link className="nav-link" to="/frozen">
-                                Frozen Nonveg
-                            </Link>
-                        </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                <Link className="nav-link" to="/frozen">
+                                    Frozen Nonveg
+                                </Link>
+                            </NavDropdown.Item>
+                        </div>
                     </NavDropdown>
                 </Nav.Item>
                 <Nav.Item>

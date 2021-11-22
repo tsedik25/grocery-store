@@ -143,18 +143,17 @@ ul.agileits_social_icons li a,
 .w3l_search input[type="submit"]:hover {
     background: url(./images/img-sp.png) no-repeat 14px 5px #84c639;
 }
-.userIconDropdown{
-    font-size: 12px;
-}
+
 .w3l_header_right {
     float: left;
     padding-left: 8em;
 }
 .w3l_header_right1 {
     float: right;
+    height: 48px;
 }
 .w3l_header_right1 h2 a {
-    font-size: 0.74em;
+    font-size: 0.68em;
     color: #fff;
     padding: 0.5em 1.5em;
     background: #fa1818;
@@ -195,7 +194,9 @@ ul.dropdown-menu.drp-mnu li a i {
     line-height: 1;
     height: 97px;
 }
-.profile_details_drop a {
+.userIconDropdown a,
+.userIconDropdown a:hover,
+.userIconDropdown a:focus{
     display: block;
     padding-top: 1em;
     font-size: 1em;
@@ -285,8 +286,8 @@ ul.dropdown-menu.drp-mnu li a i {
 .navbar-nav > .nav-item {
     float: none;
 }
-.nav > .nav-item > a:hover,
-.nav > .nav-item > a:focus {
+.nav > .nav-item:hover,
+.nav > .nav-item:focus {
     background-color: #84c639;
     color: #fff;
 }
@@ -316,21 +317,26 @@ ul.dropdown-menu.drp-mnu li a i {
     border: none;
     padding: 1em;
 }
-.w3ls_vegetables ul li {
+.w3ls_vegetables a {
     list-style-type: none;
 }
 .w3ls_vegetables ul li:first-child {
     margin-bottom: 0.5em;
 }
-.w3ls_vegetables ul li a {
+.w3ls_vegetables a a {
     color: #212121;
     /*-- w3layouts --*/
     display: block;
     text-decoration: none;
 }
-.w3ls_vegetables ul li a:hover {
+.w3ls_vegetables a a:hover {
     color: #fa1818;
+   
 }
+.w3ls_vegetables .dropdown-item:hover{
+    background-color: transparent;
+}
+
 .w3l_banner_nav_right_banner1,
 .w3l_banner_nav_right_banner,
 .w3l_banner_nav_right_banner2 {
@@ -4321,7 +4327,7 @@ input.checkbox:checked:after {
     .w3l_header_right1 h2 a {
         font-size: 14px;
     }
-    .profile_details_drop a {
+    .profile_details_drop .userIconDropdown a{
         padding-top: 0.5em;
     }
     .product_list_header span {
