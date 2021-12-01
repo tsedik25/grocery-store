@@ -282,6 +282,11 @@ ul.dropdown-menu.drp-mnu li a i {
 .w3l_banner_nav_right {
     float: right;
     width: 80%;
+    padding: 0 10px ;
+}
+.carouselImage {
+    height: 500px;
+    width: 100%;
 }
 .navbar-nav > .nav-item {
     float: none;
@@ -337,60 +342,34 @@ ul.dropdown-menu.drp-mnu li a i {
     background-color: transparent;
 }
 
-.w3l_banner_nav_right_banner1,
-.w3l_banner_nav_right_banner,
-.w3l_banner_nav_right_banner2 {
+
+.w3l_banner_nav_right_banner {
     min-height: 500px;
     text-align: right;
     padding: 10em 17em 0 0;
     margin-bottom: 5em;
 }
 .w3l_banner_nav_right_banner {
-    background: url(./images/1.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
 }
-.w3l_banner_nav_right_banner1 {
-    background: url(./images/2.jpg) no-repeat 0px 0px;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-}
-.w3l_banner_nav_right_banner2 {
-    background: url(./images/3.jpg) no-repeat 0px 0px;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-}
-.w3l_banner_nav_right_banner h3,
-.w3l_banner_nav_right_banner1 h3,
-.w3l_banner_nav_right_banner2 h3 {
+
+.w3l_banner_nav_right_banner h3{
     font-size: 2em;
     color: #fff;
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 1em;
 }
-.w3l_banner_nav_right_banner h3 span,
-.w3l_banner_nav_right_banner1 h3 span {
+.w3l_banner_nav_right_banner h3 span{
     display: block;
     font-weight: 600;
     line-height: 2em;
 }
-.w3l_banner_nav_right_banner2 h3 i {
-    /*-- agileits --*/
-    display: block;
-    font-weight: 600;
-    line-height: 2em;
-    color: #fa1818;
-}
+
 .more a {
     padding: 10px 30px;
     background: #84c639;
@@ -1485,6 +1464,10 @@ button.submit.check_out {
 }
 .w3ls_w3l_banner_nav_right_grid1 {
     margin: 3em 0 0 0em;
+}
+.productsImage {
+    height: 200px;
+    width: auto;
 }
 .w3ls_w3l_banner_nav_right_grid1 h6 {
     text-transform: uppercase;
@@ -3073,9 +3056,8 @@ input.checkbox:checked:after {
     .w3l_banner_nav_right_banner10 h3 {
         width: 45%;
     }
-    .w3l_banner_nav_right_banner1,
-    .w3l_banner_nav_right_banner,
-    .w3l_banner_nav_right_banner2 {
+   
+    .w3l_banner_nav_right_banner {
         padding: 10em 7em 0 0;
     }
     .snipcart-details {
@@ -3107,9 +3089,8 @@ input.checkbox:checked:after {
     .w3l_search {
         margin: 0.1em 0 0em 6em;
     }
-    .w3l_banner_nav_right_banner1,
-    .w3l_banner_nav_right_banner,
-    .w3l_banner_nav_right_banner2 {
+
+    .w3l_banner_nav_right_banner{
         padding: 7em 13em 0 0;
         min-height: 375px;
     }
@@ -3179,6 +3160,7 @@ input.checkbox:checked:after {
     .w3ls_w3l_banner_left {
         padding-left: 0;
     }
+
     .w3l_banner_nav_right_banner7 {
         background-position: -130px 0px;
     }
@@ -3266,9 +3248,8 @@ input.checkbox:checked:after {
         margin-left: 42em;
         width: 25%;
     }
-    .w3l_banner_nav_right_banner1,
-    .w3l_banner_nav_right_banner,
-    .w3l_banner_nav_right_banner2 {
+
+    .w3l_banner_nav_right_banner{
         padding: 7em 4em 0 0;
     }
     .wthree_banner_btm_pos h3 span {
@@ -3827,9 +3808,8 @@ input.checkbox:checked:after {
         left: 10%;
         min-width: 135px;
     }
-    .w3l_banner_nav_right_banner1,
-    .w3l_banner_nav_right_banner,
-    .w3l_banner_nav_right_banner2 {
+
+    .w3l_banner_nav_right_banner {
         min-height: 315px;
         padding: 5em 4em 0 0;
     }
@@ -4364,14 +4344,11 @@ input.checkbox:checked:after {
     .w3ls_logo_products_left1:nth-child(3) {
         margin: 5.5em 0 1em;
     }
-    .w3l_banner_nav_right_banner h3,
-    .w3l_banner_nav_right_banner1 h3,
-    .w3l_banner_nav_right_banner2 h3 {
+    .w3l_banner_nav_right_banner h3{
         font-size: 1.5em;
     }
-    .w3l_banner_nav_right_banner1,
-    .w3l_banner_nav_right_banner,
-    .w3l_banner_nav_right_banner2 {
+
+    .w3l_banner_nav_right_banner{
         min-height: 240px;
         padding: 2.5em 3em 0 0;
         margin-bottom: 3em;
@@ -4995,9 +4972,8 @@ input.checkbox:checked:after {
     .w3l_search input[type="submit"]:hover {
         background: url(./images/img-sp.png) no-repeat 11px 3px #84c639;
     }
-    .w3l_banner_nav_right_banner1,
-    .w3l_banner_nav_right_banner,
-    .w3l_banner_nav_right_banner2 {
+
+    .w3l_banner_nav_right_banner{
         min-height: 190px;
         padding: 2em 3em 0 0;
     }

@@ -1,24 +1,52 @@
-import React from "react";
+import React, {useState} from "react";
 import { Form } from "react-bootstrap";
 
 const LoginForm = () => {
+
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const baseUrl = "https://uat.ordering-boafresh.ekbana.net/";
+    const auth = "api/v4/auth";
+    const clientId = 2;
+    const clientSecret = "ZkPYPKRiUsEzVke7Q5sq21DrVvYmNK5w5bZKGzQo";
+    const grantType = "password";
+
+    const fetchLogin = () => {
+        fetch(baseUrl + auth + "/login", {
+            method: "POST",
+            body: {
+                client_id: clientId,
+                client_secret: clientSecret,
+                grant_type: grantType,
+                username: username,
+                password: password,
+            },
+        })
+        .then(response => response.json())
+        .then(data => console.log(data));
+    };
     return (
         <div className="form">
             <h2>Login to your account</h2>
-            <Form action="#" method="post">
+            <Form>
                 <Form.Control
                     type="text"
                     name="Username"
                     placeholder="Username"
                     required=" "
+                    value = {username}
+                    onChange = {e => setUsername(e.target.value)}
                 />
                 <Form.Control
                     type="password"
                     name="Password"
                     placeholder="Password"
                     required=" "
+                    value = {password}
+                    onChange = {e => setPassword(e.target.value)}
                 />
-                <Form.Control type="submit" value="Login" />
+                <Form.Control type="button" value="Login" onClick={fetchLogin}/>
             </Form>
         </div>
     );

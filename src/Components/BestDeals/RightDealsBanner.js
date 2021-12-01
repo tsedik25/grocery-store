@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Form, Col, Row, Image } from "react-bootstrap";
 import image5 from "../../images/5.png";
 import image6 from "../../images/6.png";
@@ -20,189 +20,86 @@ import tag from "../../images/tag.png";
 import { Link } from "react-router-dom";
 
 const RightDealsBanner = () => {
+    const [data, setData] = useState([]);
+    const baseUrl = "https://uat.ordering-boafresh.ekbana.net/";
+    const warehouseId = 1;
+    const apiKey =
+        "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545";
+    const fetchProducts = () => {
+        fetch(baseUrl + "/api/v4/product", {
+            method: "GET",
+            headers: {
+                "Warehouse-Id": warehouseId,
+                "Api-key": apiKey,
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data.data);
+                setData(data.data);
+            });
+    };
+
+    fetchProducts();
     return (
         <div className="w3l_banner_nav_right">
-            <div className="w3l_banner_nav_right_banner3">
-                <h3>
-                    Best Deals For New Products
-                    <span className="blink_me"></span>
-                </h3>
-            </div>
-            <div className="w3l_banner_nav_right_banner3_btm">
-                <Row>
-                    <Col md={4} className="w3l_banner_nav_right_banner3_btml">
-                        <div className="view view-tenth">
-                            <Image
-                                src={image13jpg}
-                                alt=" "
-                                className="img-responsive"
-                            />
-                            <div className="mask">
-                                <h4>Grocery Store</h4>
-                                <p>
-                                    Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia
-                                    deserunt.
-                                </p>
-                            </div>
-                        </div>
-                        <h4>Utensils</h4>
-                        <ol>
-                            <li>sunt in culpa qui officia</li>
-                            <li>commodo consequat</li>
-                            <li>sed do eiusmod tempor incididunt</li>
-                        </ol>
-                    </Col>
-                    <Col md={4} className="w3l_banner_nav_right_banner3_btml">
-                        <div className="view view-tenth">
-                            <Image
-                                src={image14jpg}
-                                alt=" "
-                                className="img-responsive"
-                            />
-                            <div className="mask">
-                                <h4>Grocery Store</h4>
-                                <p>
-                                    Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia
-                                    deserunt.
-                                </p>
-                            </div>
-                        </div>
-                        <h4>Hair Care</h4>
-                        <ol>
-                            <li>enim ipsam voluptatem officia</li>
-                            <li>tempora incidunt ut labore et</li>
-                            <li>vel eum iure reprehenderit</li>
-                        </ol>
-                    </Col>
-                    <Col md={4} className="w3l_banner_nav_right_banner3_btml">
-                        <div className="view view-tenth">
-                            <Image
-                                src={image15jpg}
-                                alt=" "
-                                className="img-responsive"
-                            />
-                            <div className="mask">
-                                <h4>Grocery Store</h4>
-                                <p>
-                                    Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia
-                                    deserunt.
-                                </p>
-                            </div>
-                        </div>
-                        <h4>Cookies</h4>
-                        <ol>
-                            <li>dolorem eum fugiat voluptas</li>
-                            <li>ut aliquid ex ea commodi</li>
-                            <li>magnam aliquam quaerat</li>
-                        </ol>
-                    </Col>
-                </Row>
-                <div className="clearfix"> </div>
-            </div>
+
             <div className="w3ls_w3l_banner_nav_right_grid">
-                <h3>Popular Brands</h3>
+                <h3>All Products</h3>
                 <div className="w3ls_w3l_banner_nav_right_grid1">
-                    <h6>food</h6>
                     <Row>
-                        <Col md={3} className="w3ls_w3l_banner_left">
-                            <div className="hover14 column">
-                                <div className="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
-                                    <div className="agile_top_brand_left_grid_pos">
-                                        <Image
-                                            src={offer}
-                                            alt=" "
-                                            className="img-responsive"
-                                        />
-                                    </div>
-                                    <div className="agile_top_brand_left_grid1">
-                                        <figure>
-                                            <div className="snipcart-item block">
-                                                <div className="snipcart-thumb">
-                                                    <Link to="single.html">
-                                                        <Image
-                                                            src={image5}
-                                                            alt=" "
-                                                            className="img-responsive"
-                                                        />
-                                                    </Link>
-                                                    <p>
-                                                        knorr instant soup (100
-                                                        gm)
-                                                    </p>
-                                                    <h4>
-                                                        $3.00 <span>$5.00</span>
-                                                    </h4>
-                                                </div>
-                                                <div className="snipcart-details">
-                                                    <form
-                                                        action="#"
-                                                        method="post"
-                                                    >
-                                                        <fieldset>
-                                                            <Form.Control
-                                                                type="hidden"
-                                                                name="cmd"
-                                                                value="_cart"
-                                                            />
-                                                            <Form.Control
-                                                                type="hidden"
-                                                                name="add"
-                                                                value="1"
-                                                            />
-                                                            <Form.Control
-                                                                type="hidden"
-                                                                name="business"
-                                                                value=" "
-                                                            />
-                                                            <Form.Control
-                                                                type="hidden"
-                                                                name="item_name"
-                                                                value="knorr instant soup"
-                                                            />
-                                                            <Form.Control
-                                                                type="hidden"
-                                                                name="amount"
-                                                                value="3.00"
-                                                            />
-                                                            <Form.Control
-                                                                type="hidden"
-                                                                name="discount_amount"
-                                                                value="1.00"
-                                                            />
-                                                            <Form.Control
-                                                                type="hidden"
-                                                                name="currency_code"
-                                                                value="USD"
-                                                            />
-                                                            <Form.Control
-                                                                type="hidden"
-                                                                name="return"
-                                                                value=" "
-                                                            />
-                                                            <Form.Control
-                                                                type="hidden"
-                                                                name="cancel_return"
-                                                                value=" "
-                                                            />
-                                                            <Form.Control
-                                                                type="submit"
-                                                                name="submit"
-                                                                value="Add to cart"
-                                                                className="button"
-                                                            />
-                                                        </fieldset>
-                                                    </form>
-                                                </div>
+                        {data != undefined ? (
+                            data.map(item => {
+                                return (<Col md={3} className="mb-3 w3ls_w3l_banner_left">
+                                    <div className="hover14 column">
+                                        <div className="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
+                                            
+                                            <div className="agile_top_brand_left_grid1">
+                                                <figure>
+                                                    <div className="snipcart-item block">
+                                                        <div className="snipcart-thumb">
+                                                            <Link to="single.html">
+                                                                <Image
+                                                                    src={item.images[0].imageName}
+                                                                    alt=" "
+                                                                    className="img-responsive productsImage"
+
+                                                                />
+                                                            </Link>
+                                                            <p>
+                                                                {item.title}
+                                                            </p>
+                                                            <h4>
+                                                                NRs. {item.unitPrice[0].sellingPrice}
+                                                            </h4>
+                                                        </div>
+                                                        <div className="snipcart-details">
+                                                            <form
+                                                                action="#"
+                                                                method="post"
+                                                            >
+                                                                
+                                                                    <Form.Control
+                                                                        type="submit"
+                                                                        name="submit"
+                                                                        value="Add to cart"
+                                                                        className="button"
+                                                                    />
+                                                               
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </figure>
                                             </div>
-                                        </figure>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col md={3} className="w3ls_w3l_banner_left">
+                                </Col>)
+                            })
+                        ) : (
+                            <div>LOADING...</div>
+                        )}
+
+                        {/* <Col md={3} className="w3ls_w3l_banner_left">
                             <div className="hover14 column">
                                 <div className="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
                                     <div className="agile_top_brand_left_grid_pos">
@@ -482,11 +379,11 @@ const RightDealsBanner = () => {
                                     </div>
                                 </div>
                             </div>
-                        </Col>
+                        </Col> */}
                     </Row>
                     <div className="clearfix"> </div>
                 </div>
-                <div className="w3ls_w3l_banner_nav_right_grid1">
+                {/* <div className="w3ls_w3l_banner_nav_right_grid1">
                     <h6>vegetables & fruits</h6>
                     <Row>
                         <Col md={3} className="w3ls_w3l_banner_left">
@@ -1249,7 +1146,7 @@ const RightDealsBanner = () => {
                         </Col>
                     </Row>
                     <div className="clearfix"> </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

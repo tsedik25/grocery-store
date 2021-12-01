@@ -1,7 +1,6 @@
 import { faPencilAlt, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, {useState, useEffect} from "react";
-import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Login from "../../Pages/Login";
 import LoginForm from "./LoginForm";
@@ -18,21 +17,30 @@ const LoginContainer = () => {
 
     const [login, setLogin] = useState(true);
 
-    const [item, setItem] = useState(loginForm);
+    const [form, setForm] = useState(loginForm);
+
     const handleitem = () => {
         setLogin(!login);
-    };
-
-    useEffect(() => {
         if (login){
-            setItem(loginForm);
+            setForm(loginForm);
             setIcon(loginIcon);
         }
         else{
-            setItem(signupForm);
+            setForm(signupForm);
             setIcon(signupIcon);
         }
-    })
+    };
+
+    // useEffect(() => {
+    //     if (login){
+    //         setForm(loginForm);
+    //         setIcon(loginIcon);
+    //     }
+    //     else{
+    //         setForm(signupForm);
+    //         setIcon(signupIcon);
+    //     }
+    // })
     
 
     return (
@@ -47,7 +55,7 @@ const LoginContainer = () => {
                             </i>
                             <div className="tooltip">Click Me</div>
                         </div>
-                        {item}
+                        {form} 
                         <div className="cta">
                             <Link to="#">Forgot your password?</Link>
                         </div>

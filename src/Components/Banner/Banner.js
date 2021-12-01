@@ -4,15 +4,15 @@ import BottomBanner from "./BottomBanner";
 import LeftBanner from "./LeftBanner";
 import RightBanner from "./RightBanner";
 
-const Banner = () => {
+const Banner = (props) => {
     return (
         <>
             <div className="banner">
                 <LeftBanner />
-                <RightBanner />
+                <RightBanner rightBanner={props.banner}/>
                 <div className="clearfix"></div>
             </div>
-            <BottomBanner />
+            <BottomBanner adsBanner={props.adsBanner}/>
         </>
     );
 };
