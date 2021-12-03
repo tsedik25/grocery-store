@@ -1,32 +1,15 @@
-import React, { useState } from "react";
-import { Form, Col, Row, Image } from "react-bootstrap";
-import image5 from "../../images/5.png";
-import image6 from "../../images/6.png";
-import image7 from "../../images/7.png";
-import image8 from "../../images/8.png";
-import image9 from "../../images/9.png";
-import image10 from "../../images/10.png";
-import image11 from "../../images/11.png";
-import image12 from "../../images/12.png";
-import image13jpg from "../../images/13.jpg";
-import image13 from "../../images/13.png";
-import image14jpg from "../../images/14.jpg";
-import image14 from "../../images/14.png";
-import image15 from "../../images/15.png";
-import image15jpg from "../../images/15.jpg";
-import image16 from "../../images/16.png";
-import offer from "../../images/offer.png";
-import tag from "../../images/tag.png";
-import { Link } from "react-router-dom";
+import React, {useState} from 'react';
+import { Row, Col, Image, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const RightDealsBanner = () => {
+const ProductsByCategories = (props) => {
     const [data, setData] = useState([]);
     const baseUrl = "https://uat.ordering-boafresh.ekbana.net/";
     const warehouseId = 1;
     const apiKey =
         "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545";
     const fetchProducts = () => {
-        fetch(baseUrl + "/api/v4/product", {
+        fetch(baseUrl + "/api/v4/product?categoryId="+ props.categoryId, {
             method: "GET",
             headers: {
                 "Warehouse-Id": warehouseId,
@@ -35,7 +18,6 @@ const RightDealsBanner = () => {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data.data);
                 setData(data.data);
             });
     };
@@ -44,11 +26,13 @@ const RightDealsBanner = () => {
     return (
         <div className="w3l_banner_nav_right">
             <div className="w3ls_w3l_banner_nav_right_grid">
-                <h3>All Products</h3>
+            {data !== undefined ? (
+                <>
+                {/* <h3>{data[0].categoryTitle}</h3> */}
                 <div className="w3ls_w3l_banner_nav_right_grid1">
                     <Row>
-                        {data != undefined ? (
-                            data.map((item) => {
+                        
+                            {data.map((item) => {
                                 return (
                                     <Col
                                         md={3}
@@ -103,16 +87,18 @@ const RightDealsBanner = () => {
                                         </div>
                                     </Col>
                                 );
-                            })
-                        ) : (
-                            <div>LOADING...</div>
-                        )}
+                            })}
+                        
                     </Row>
                     <div className="clearfix"> </div>
                 </div>
+                </>
+                        ) : (
+                    <div>LOADING...</div>
+                )}
             </div>
         </div>
     );
-};
+}
 
-export default RightDealsBanner;
+export default ProductsByCategories

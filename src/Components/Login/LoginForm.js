@@ -12,19 +12,29 @@ const LoginForm = () => {
     const clientSecret = "ZkPYPKRiUsEzVke7Q5sq21DrVvYmNK5w5bZKGzQo";
     const grantType = "password";
 
-    const fetchLogin = () => {
-        fetch(baseUrl + auth + "/login", {
+    const fetchLogin = async () => {
+        let response = await fetch(baseUrl + auth + "/login", {
             method: "POST",
-            body: {
+            headers: {
+                "Warehouse-Id": 1,
+                "Api-key": "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
                 client_id: clientId,
                 client_secret: clientSecret,
                 grant_type: grantType,
                 username: username,
                 password: password,
-            },
+            }),
         })
-        .then(response => response.json())
-        .then(data => console.log(data));
+        let data = await response.json();
+        console.log(response);
+        if (response.status == 200) {
+            localStorage.setItem("access-token", data.access_token)
+        }
+        console.log(data);
+        
     };
     return (
         <div className="form">

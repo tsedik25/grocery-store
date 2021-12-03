@@ -23,6 +23,14 @@ import Frozen from "./Pages/Frozen";
 import Bread from "./Pages/Bread";
 import PrivacyTerms from "./Pages/PrivacyTerms";
 import Faq from "./Pages/Faq";
+import Profile from "./Pages/Profile";
+import Pizza from "./Pages/Pizza";
+import Momo from "./Pages/Momo";
+import Noodles from "./Pages/Noodles";
+import Chilli from "./Pages/Chilli";
+import Sandwich from "./Pages/Sandwich";
+import HealthyChoice from "./Pages/HealthyChoice";
+import Rice from "./Pages/Rice";
 
 
 function App() {
@@ -40,15 +48,16 @@ function App() {
                 <Route path="/products" element={<BestDeals />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/mail" element={<ContactUs />} />
-                <Route path="/household" element={<Households />} />
-                <Route path="/vegetables" element={<Vegetables />} />
-                <Route path="/kitchen" element={<Kitchen />} />
-                <Route path="/drinks" element={<Drinks />} />
-                <Route path="/pet" element={<Pet />} />
-                <Route path="/frozen" element={<Frozen />} />
-                <Route path="/bread" element={<Bread />} />
+                <Route path="/momo" element={<Momo />} />
+                <Route path="/noodles" element={<Noodles />} />
+                <Route path="/pizza" element={<Pizza />} />
+                <Route path="/chilli" element={<Chilli />} />
+                <Route path="/sandwich" element={<Sandwich />} />
+                <Route path="/healthy%20choice" element={<HealthyChoice />} />
+                <Route path="/rice" element={<Rice />} />
                 <Route path="/privacy" element={<PrivacyTerms />} />
                 <Route path="/faqs" element={<Faq />} />
+                <Route path="/profile" element={<Profile />} />
             </Routes>
             <NewsLetter />
             <Footer />

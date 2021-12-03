@@ -1,21 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-    Form,
-    NavDropdown,
-    Container,
-} from "react-bootstrap";
+import { Form, NavDropdown, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faUser,
     faPhoneAlt,
     faEnvelope,
- 
 } from "@fortawesome/free-solid-svg-icons";
 
-
-
 const Navbars = () => {
+    const access_token = localStorage.getItem("access-token");
     const userIcon = <FontAwesomeIcon icon={faUser} />;
     const [search, setSearch] = useState("");
     return (
@@ -32,7 +26,7 @@ const Navbars = () => {
                             placeholder="Search Link product..."
                             value={search}
                             required=""
-                            onChange= {(e) => setSearch(e.target.value)}
+                            onChange={(e) => setSearch(e.target.value)}
                         />
                         <Form.Control type="submit" value=" " />
                     </Form>
@@ -66,16 +60,36 @@ const Navbars = () => {
                         id="basic-nav-dropdown"
                     >
                         <div className="w3ls_vegetables">
-                            <NavDropdown.Item>
-                                <Link to="/login" className="nav-link">
-                                    Login
-                                </Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item>
-                                <Link to="/login" className="nav-link">
-                                    Sign Up
-                                </Link>
-                            </NavDropdown.Item>
+                            {access_token == undefined ? (
+                                <>
+                                    <NavDropdown.Item>
+                                        <Link to="/login" className="nav-link">
+                                            Login
+                                        </Link>
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item>
+                                        <Link to="/login" className="nav-link">
+                                            Sign Up
+                                        </Link>
+                                    </NavDropdown.Item>
+                                </>
+                            ) : (
+                                <>
+                                    <NavDropdown.Item>
+                                        <Link
+                                            to="/profile"
+                                            className="nav-link"
+                                        >
+                                            Profile
+                                        </Link>
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item>
+                                        <Link to="/login" className="nav-link">
+                                            Logout
+                                        </Link>
+                                    </NavDropdown.Item>
+                                </>
+                            )}
                         </div>
                     </NavDropdown>
                 </div>

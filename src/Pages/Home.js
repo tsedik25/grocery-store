@@ -17,11 +17,15 @@ const Home = () => {
             }})
             .then(response => response.json())
             .then(data => {
-                console.log(data.data)
+                // console.log(data.data)
                 setData(data.data)})
     }
+    try{
+        fetchHome();
+    }catch(err){
+        console.log(err)
+    }
     
-    fetchHome();
     return (
         <div>
             <Helmet>

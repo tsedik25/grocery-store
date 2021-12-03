@@ -13,6 +13,11 @@ const SignupForm = () => {
     const fetchSignup = () => {
         fetch(baseUrl + auth + "/signup", {
             method: "POST",
+            headers: {
+                "Warehouse-Id": "1",
+                "Api-key": "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+                "Content-Type": "application/json",
+            },
             body: JSON.stringify({
                 first_name: firstName,
                 last_name: lastName,
