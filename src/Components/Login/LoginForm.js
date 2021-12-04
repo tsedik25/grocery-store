@@ -1,8 +1,8 @@
-import React, {useState} from "react";
-import { Form } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
-
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -17,7 +17,8 @@ const LoginForm = () => {
             method: "POST",
             headers: {
                 "Warehouse-Id": 1,
-                "Api-key": "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+                "Api-key":
+                    "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
@@ -27,14 +28,14 @@ const LoginForm = () => {
                 username: username,
                 password: password,
             }),
-        })
+        });
         let data = await response.json();
         console.log(response);
         if (response.status == 200) {
-            localStorage.setItem("access-token", data.access_token)
+            localStorage.setItem("access-token", data.access_token);
+            window.location.href = "/"
         }
         console.log(data);
-        
     };
     return (
         <div className="form">
@@ -45,18 +46,22 @@ const LoginForm = () => {
                     name="Username"
                     placeholder="Username"
                     required=" "
-                    value = {username}
-                    onChange = {e => setUsername(e.target.value)}
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                 />
                 <Form.Control
                     type="password"
                     name="Password"
                     placeholder="Password"
                     required=" "
-                    value = {password}
-                    onChange = {e => setPassword(e.target.value)}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                 />
-                <Form.Control type="button" value="Login" onClick={fetchLogin}/>
+                <Form.Control
+                    type="button"
+                    value="Login"
+                    onClick={fetchLogin}
+                />
             </Form>
         </div>
     );

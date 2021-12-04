@@ -31,6 +31,8 @@ import Chilli from "./Pages/Chilli";
 import Sandwich from "./Pages/Sandwich";
 import HealthyChoice from "./Pages/HealthyChoice";
 import Rice from "./Pages/Rice";
+import Checkout from "./Pages/Checkout";
+import ForgotPassword from "./Pages/ForgotPassword";
 
 
 function App() {
@@ -58,6 +60,8 @@ function App() {
                 <Route path="/privacy" element={<PrivacyTerms />} />
                 <Route path="/faqs" element={<Faq />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/forgotPassword" element={<ForgotPassword />} />
             </Routes>
             <NewsLetter />
             <Footer />

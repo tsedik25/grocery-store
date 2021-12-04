@@ -32,18 +32,8 @@ const Navbars = () => {
                     </Form>
                 </div>
                 <div className="product_list_header">
-                    <Form action="#" method="post" className="last">
+                    <Link to="/checkout" className="last">
                         <fieldset>
-                            <Form.Control
-                                type="hidden"
-                                name="cmd"
-                                value="_cart"
-                            />
-                            <Form.Control
-                                type="hidden"
-                                name="display"
-                                value="1"
-                            />
                             <Form.Control
                                 type="submit"
                                 name="submit"
@@ -51,7 +41,7 @@ const Navbars = () => {
                                 className="button"
                             />
                         </fieldset>
-                    </Form>
+                    </Link>
                 </div>
                 <div className="w3l_header_right">
                     <NavDropdown
@@ -84,9 +74,12 @@ const Navbars = () => {
                                         </Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/login" className="nav-link">
+                                        <div className="nav-link" onClick={() => {
+                                            localStorage.removeItem("access-token")
+                                            window.location.href="/"
+                                            }}>
                                             Logout
-                                        </Link>
+                                        </div>
                                     </NavDropdown.Item>
                                 </>
                             )}

@@ -57,7 +57,7 @@ const LoginContainer = () => {
                         </div>
                         {form} 
                         <div className="cta">
-                            <Link to="#">Forgot your password?</Link>
+                            <Link to="/forgotPassword">Forgot your password?</Link>
                         </div>
                     </div>
                 </div>

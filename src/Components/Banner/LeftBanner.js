@@ -15,7 +15,7 @@ const LeftBanner = () => {
                 "Api-key": apiKey
             }})
             let data = await response.json();
-            console.log(data);
+            
             if (response.status === 200) {
                 setCategories(data.data)
             }
@@ -35,7 +35,7 @@ const LeftBanner = () => {
                     </Link>
                 </Nav.Item>
                 {categories.map(category => {
-                    return <Nav.Item>
+                    return <Nav.Item key={category.id}>
                     <Link className="nav-link" to = {'/'+ category.title.toLowerCase()}>
                         {category.title} 
                     </Link>

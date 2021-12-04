@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Image } from "react-bootstrap";
+import { Image, Row } from "react-bootstrap";
 import ChangePassword from "../Components/Profile/ChangePassword";
 import ProfileContainer from "../Components/Profile/ProfileContainer";
 import UpdateForm from "../Components/Profile/UpdateForm";
@@ -30,8 +30,11 @@ const Profile = () => {
     return (
         <div>
             <ProfileContainer profile={profile} />
-            <UpdateForm />
-            <ChangePassword />
+            <Row>
+                <UpdateForm />
+                <ChangePassword />
+            </Row>
+            <div className="clear-fix"></div>
         </div>
     );
 };

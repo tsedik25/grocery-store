@@ -5,7 +5,7 @@ import { Image, Card } from "react-bootstrap";
 const ProfileContainer = (props) => {
     return (
         <div>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem", margin: "auto" }}>
                 <Card.Img variant="top" src={props.profile.image} />
                 <Card.Body>
                     <Card.Title>{props.profile.firstName} {props.profile.lastName}</Card.Title>
