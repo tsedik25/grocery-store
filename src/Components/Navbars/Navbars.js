@@ -28,7 +28,7 @@ const Navbars = () => {
                             required=""
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        <Form.Control type="submit" value=" " />
+                        <Link to={"/search/" + search} ><Form.Control type="submit" value=" " /></Link>
                     </Form>
                 </div>
                 <div className="product_list_header">

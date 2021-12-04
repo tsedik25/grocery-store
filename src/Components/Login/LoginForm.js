@@ -13,30 +13,44 @@ const LoginForm = () => {
     const grantType = "password";
 
     const fetchLogin = async () => {
-        let response = await fetch(baseUrl + auth + "/login", {
-            method: "POST",
-            headers: {
-                "Warehouse-Id": 1,
-                "Api-key":
-                    "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                client_id: clientId,
-                client_secret: clientSecret,
-                grant_type: grantType,
-                username: username,
-                password: password,
-            }),
-        });
-        let data = await response.json();
-        console.log(response);
-        if (response.status == 200) {
-            localStorage.setItem("access-token", data.access_token);
-            window.location.href = "/"
+        if (validate()) {
+            let response = await fetch(baseUrl + auth + "/login", {
+                method: "POST",
+                headers: {
+                    "Warehouse-Id": 1,
+                    "Api-key":
+                        "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    client_id: clientId,
+                    client_secret: clientSecret,
+                    grant_type: grantType,
+                    username: username,
+                    password: password,
+                }),
+            });
+            let data = await response.json();
+            console.log(response);
+            if (response.status == 200) {
+                localStorage.setItem("access-token", data.access_token);
+                window.location.href = "/";
+            }
         }
-        console.log(data);
     };
+
+    const validate = () => {
+        if (username === "") {
+            alert("Username cannot be left empty!");
+            return false;
+        } else if (password === "") {
+            alert("Password cannot be left empty!");
+            return false;
+        } else {
+            return true;
+        }
+    };
+
     return (
         <div className="form">
             <h2>Login to your account</h2>

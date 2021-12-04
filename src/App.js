@@ -14,13 +14,6 @@ import AboutUs from "./Pages/AboutUs";
 import BestDeals from "./Pages/BestDeals";
 import { Services } from "./Pages/Services";
 import ContactUs from "./Pages/ContactUs";
-import Households from "./Pages/Households";
-import Vegetables from "./Pages/Vegetables";
-import Kitchen from "./Pages/Kitchen";
-import { Drinks } from "./Pages/Drinks";
-import Pet from "./Pages/Pet";
-import Frozen from "./Pages/Frozen";
-import Bread from "./Pages/Bread";
 import PrivacyTerms from "./Pages/PrivacyTerms";
 import Faq from "./Pages/Faq";
 import Profile from "./Pages/Profile";
@@ -33,6 +26,7 @@ import HealthyChoice from "./Pages/HealthyChoice";
 import Rice from "./Pages/Rice";
 import Checkout from "./Pages/Checkout";
 import ForgotPassword from "./Pages/ForgotPassword";
+import Search from "./Pages/Search";
 
 
 function App() {
@@ -62,6 +56,7 @@ function App() {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/forgotPassword" element={<ForgotPassword />} />
+                <Route path="/search/:searchQuery" element={<Search />} />
             </Routes>
             <NewsLetter />
             <Footer />

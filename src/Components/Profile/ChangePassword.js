@@ -9,27 +9,49 @@ const ChangePassword = () => {
     const access_token = localStorage.getItem("access-token");
 
     const fetchChangePassword = () => {
-        fetch(baseUrl + "api/v4/profile/change-password", {
-            method: "POST",
-            headers: {
-                Authorization: "Bearer " + access_token,
-                "Api-key":
-                    "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
-            },
-            body: JSON.stringify({
-                "new-password": newPassword,
-                "old-password": oldPassword,
-                "confirm-password": confirmPassword,
-            }),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-            });
+        if (validate()) {
+            fetch(baseUrl + "api/v4/profile/change-password", {
+                method: "POST",
+                headers: {
+                    Authorization: "Bearer " + access_token,
+                    "Api-key":
+                        "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+                },
+                body: JSON.stringify({
+                    "new-password": newPassword,
+                    "old-password": oldPassword,
+                    "confirm-password": confirmPassword,
+                }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                });
+        }
+    };
+
+    const validate = () => {
+        if (newPassword === "") {
+            alert("New Password Field cannot be left empty!");
+            return false;
+        } else if (oldPassword === "") {
+            alert("Old Password Field cannot be left empty!");
+            return false;
+        } else if (confirmPassword === "") {
+            alert("Confirm Password Field cannot be left empty!");
+            return false;
+        } else if (newPassword !== confirmPassword) {
+            alert(
+                "New Password and Confirm Password field needs to be the same!"
+            );
+            return false;
+        } else {
+            return true;
+        }
     };
 
     return (
-        <Col md = {6}>
+        <Col md={6}>
             <div className="w3_login">
                 <h3>Change your Password</h3>
                 <div className="w3_login_module">

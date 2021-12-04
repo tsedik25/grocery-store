@@ -39,6 +39,28 @@ const RightDealsBanner = () => {
                 setData(data.data);
             });
     };
+    const addToCart = async (newDishes) => {
+        let response = await fetch(baseUrl + "/api/v4/cart-product", {
+            method: "POST",
+            headers: {
+                "Warehouse-Id": warehouseId,
+                "Api-key": apiKey,
+                Authorization: localStorage.getItem("access-token"),
+            },
+            body: JSON.stringify({
+                productId: newDishes.id,
+                priceId: newDishes.unitPrice[0].id,
+                quantity: "1",
+                note: "testing",
+            }),
+        });
+        let data = response.json();
+        console.log(response);
+        if (response.status === 200) {
+            alert("Item Added!");
+            
+        }
+    };
 
     fetchProducts();
     return (
@@ -89,10 +111,11 @@ const RightDealsBanner = () => {
                                                                     method="post"
                                                                 >
                                                                     <Form.Control
-                                                                        type="submit"
+                                                                        type="button"
                                                                         name="submit"
                                                                         value="Add to cart"
                                                                         className="button"
+                                                                        onClick={() => addToCart(item)}
                                                                     />
                                                                 </form>
                                                             </div>

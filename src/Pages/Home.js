@@ -17,7 +17,7 @@ const Home = () => {
                 "Api-key": apiKey,
             },
         });
-        let data = response.json();
+        let data = await response.json();
         if (response.status === 200) {
             setData(data.data);
         }
